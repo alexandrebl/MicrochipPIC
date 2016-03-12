@@ -1,0 +1,649 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+end_init CODE 0 A2 A2 4 1
+reset_vec CODE 0 0 0 4 1
+idloc IDLOC 0 200000 200000 8 1
+config CONFIG 0 300000 300000 E 1
+$dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+intcodelo CODE 0 18 18 8A 1
+intcode CODE 0 8 8 C 1
+smallconst SMALLCONST 0 800 800 22 1
+text20 CODE 0 D30 D30 10 1
+text19 CODE 0 CEE CEE 1C 1
+text18 CODE 0 A1E A1E 88 1
+text17 CODE 0 CA0 CA0 2E 1
+text16 CODE 0 D52 D52 8 1
+text15 CODE 0 C72 C72 2E 1
+text14 CODE 0 AA6 AA6 6C 1
+intcode_body CODE 0 984 984 9A 1
+text11 CODE 0 D5A D5A 2 1
+text10 CODE 0 BB6 BB6 40 1
+text9 CODE 0 D20 D20 10 1
+text8 CODE 0 CCE CCE 20 1
+text7 CODE 0 822 822 B8 1
+text6 CODE 0 C34 C34 3E 1
+text5 CODE 0 D4A D4A 8 1
+text4 CODE 0 B72 B72 44 1
+text3 CODE 0 B12 B12 60 1
+text2 CODE 0 BF6 BF6 3E 1
+text1 CODE 0 8DA 8DA AA 1
+text0 CODE 0 D0A D0A 16 1
+cstackCOMRAM COMRAM 1 1 1 30 1
+cstackBANK0 BANK0 1 60 60 1C 1
+cinit CODE 0 D40 D40 A 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 00007C-0000FF 1
+BANK1 000100-0001FF 1
+BANK2 000200-0002FF 1
+BANK3 000300-0003FF 1
+BANK4 000400-0004FF 1
+BANK5 000500-0005FF 1
+BANK6 000600-0006FF 1
+BANK7 000700-0007FF 1
+BIGRAM 000031-00005F 1
+BIGRAM 00007C-0007FF 1
+CODE 000004-000007 1
+CODE 000014-000017 1
+CODE 0000A6-0007FF 1
+CODE 000D5C-007FFF 1
+COMRAM 000031-00005F 1
+CONST 000004-000007 1
+CONST 000014-000017 1
+CONST 0000A6-0007FF 1
+CONST 000D5C-007FFF 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 000D5C-007FFF 1
+RAM 00007C-0007FF 1
+SFR 000F60-000FFF 1
+SMALLCONST 000D5C-007FFF 1
+STACK 00007C-0007FF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":7 8 intcode CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":17 8 intcode CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":16 18 intcodelo CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\system.c":9 18 intcodelo CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":17 5C intcodelo CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":3 822 text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":4 826 text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":5 82C text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":7 836 text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":9 844 text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":10 85E text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":11 880 text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":12 8AA text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":13 8D8 text7 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":33 8DA text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":36 8DA text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":38 8F2 text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":39 914 text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":40 92E text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":42 950 text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":40 96E text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":38 978 text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":45 982 text1 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":7 984 intcode_body CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":8 9B6 intcode_body CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":9 9BC intcode_body CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":10 9C0 intcode_body CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":11 9D4 intcode_body CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":12 9E2 intcode_body CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\interrupts.c":14 9E4 intcode_body CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":3 A1E text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":4 A22 text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":5 A28 text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":7 A2E text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":9 A34 text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":10 A48 text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":11 A62 text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":12 A82 text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":13 AA4 text18 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":61 AA6 text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":62 AA6 text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":63 AAE text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":64 AC8 text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":66 AD2 text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":64 AF2 text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":68 B0E text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":64 B10 text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":68 B12 text14 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":83 B12 text3 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":85 B16 text3 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":86 B22 text3 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":88 B2A text3 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":89 B34 text3 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":93 B44 text3 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":94 B66 text3 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":95 B70 text3 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":15 B72 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":16 B72 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":17 B74 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":18 B76 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":19 B78 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":20 B7A text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":21 B7C text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":22 B7E text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":24 B80 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":25 B90 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":26 B96 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":27 B9C text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":28 BA2 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":29 BA8 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":30 BAE text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":31 BB4 text4 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":6 BB6 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":8 BB6 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":9 BBA text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":10 BBE text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":11 BC2 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":12 BC6 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":14 BCA text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":15 BCE text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":17 BD2 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":18 BD6 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":19 BDA text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":20 BDE text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":21 BE2 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":23 BE6 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":24 BE8 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":26 BEA text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":27 BEC text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":29 BEE text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":30 BF0 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":31 BF2 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\user.c":32 BF4 text10 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":47 BF6 text2 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":48 BFA text2 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":49 C10 text2 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":50 C16 text2 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":51 C2C text2 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":52 C32 text2 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":54 C34 text6 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":55 C38 text6 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":56 C4E text6 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":57 C54 text6 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":58 C6A text6 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":59 C70 text6 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":47 C72 text15 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":48 C76 text15 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":49 C84 text15 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":50 C8A text15 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":51 C98 text15 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":52 C9E text15 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":54 CA0 text17 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":55 CA4 text17 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":56 CB2 text17 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":57 CB8 text17 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":58 CC6 text17 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":59 CCC text17 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":70 CCE text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":71 CD2 text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":72 CDC text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":73 CDE text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":74 CE0 text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":75 CE2 text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":76 CE2 text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":77 CE4 text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":78 CE6 text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":79 CEA text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":81 CEC text8 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":70 CEE text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":71 CF2 text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":72 CF8 text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":73 CFA text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":74 CFC text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":75 CFE text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":76 CFE text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":77 D00 text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":78 D02 text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":79 D06 text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":81 D08 text19 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\main.c":8 D0A text0 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\main.c":10 D0A text0 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\main.c":11 D0E text0 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\main.c":13 D12 text0 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\main.c":14 D16 text0 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\main.c":15 D1A text0 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\main.c":17 D1E text0 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":97 D20 text9 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":98 D20 text9 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\main.c":21 D20 text0 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":99 D2E text9 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":97 D30 text20 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":98 D30 text20 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":99 D3E text20 CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2385 D40 cinit CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2387 D40 cinit CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2390 D40 cinit CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2396 D40 cinit CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2397 D40 cinit CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2398 D40 cinit CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2399 D42 cinit CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2400 D44 cinit CODE
+"C:\Users\ALEXAN~1\AppData\Local\Temp\s670.":2401 D46 cinit CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":105 D4A text5 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":106 D4A text5 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":107 D50 text5 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":101 D52 text16 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":102 D52 text16 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\lcd.c":103 D58 text16 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\system.c":6 D5A text11 CODE
+"D:\GitHub\Microchip_PIC18F4550\LCD4Bits1602\system.c":9 D5A text11 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__CFG_XINST$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__S0 30000E 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__S1 7C 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__S2 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_clear 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_write 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2lcd_enable@iscmd 13 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_PLLDIV$5 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_low_isr 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_test 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_main D0A 0 CODE 0 text0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+___sp 0 0 STACK 2 stack C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+start A2 0 CODE 0 init C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__end_of_lcd_delay D30 0 CODE 0 text9 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_write_buffer@buffer 17 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_TRISA F92 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_TRISB F93 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_TRISC F94 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_PORTA F80 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_TRISD F95 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_PORTB F81 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_TRISE F96 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_PORTC F82 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__HRAM 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_PORTD F83 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__LRAM 1 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_PORTE F84 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_CMCON FB4 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_enable 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_cursor_off D4A 0 CODE 0 text5 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hrparam 0 0 ABS 0 rparam dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lrparam 0 0 ABS 0 rparam dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hram 0 0 ABS 0 ram dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lram 0 0 ABS 0 ram dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hcomram 0 0 ABS 0 comram dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lcomram 0 0 ABS 0 comram dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of__stringdata 820 0 SMALLCONST 0 smallconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbss 0 0 RAM 1 bss dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbss 0 0 RAM 1 bss dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_ofi2_lcd_write_cmd CCE 0 CODE 0 text17 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_set 8DA 0 CODE 0 text7 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2_lcd_write C72 0 CODE 0 text15 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_write_cmd C34 0 CODE 0 text6 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_ADCON1 FC1 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_RCONbits FD0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_init B72 0 CODE 0 text4 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hintret 0 0 ABS 0 intret dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lintret 0 0 ABS 0 intret dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hramtop 800 0 RAM 0 ramtop dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lramtop 800 0 RAM 0 ramtop dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_high_isr 8 0 CODE 0 intcode dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hintcode 14 0 CODE 0 intcode dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lintcode 8 0 CODE 0 intcode dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__pintcode 8 0 CODE 0 intcode dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_test 8DA 0 CODE 0 text1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_oflcd_test@F5282 811 0 SMALLCONST 0 smallconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hdata 0 0 ABS 0 data dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ldata 0 0 ABS 0 data dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+stackhi 7FF 0 ABS 0 - C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_ConfigureOscillator D5C 0 CODE 0 text11 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_ofi2_lcd_enable D0A 0 CODE 0 text19 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_write BF6 0 CODE 0 text2 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+stacklo 7C 0 ABS 0 - C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_BOR$ON 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hinit A2 0 CODE 0 init dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Linit A2 0 CODE 0 init dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_clear D52 0 CODE 0 text16 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_write_cmd 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hintcodelo A2 0 CODE 0 intcodelo dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lintcodelo 18 0 CODE 0 intcodelo dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_main D20 0 CODE 0 text0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__pintcodelo 18 0 CODE 0 intcodelo dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_enable@iscmd 60 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext 0 0 ABS 0 text dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext 0 0 ABS 0 text dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+end_of_initialization D40 0 CODE 0 cinit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_USBDIV$1 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_write_buffer 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2lcd_write_cmd@x 16 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_pos@linha 66 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2_lcd_set A1E 0 CODE 0 text18 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_TRISAbits F92 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_PORTAbits F80 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_TRISDbits F95 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_PORTDbits F83 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_delay D20 0 CODE 0 text9 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_pos B72 0 CODE 0 text3 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_high_isr A1E 0 CODE 0 intcode_body dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_set@msb 30 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_enable CCE 0 CODE 0 text8 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_test@F5282 801 0 SMALLCONST 0 smallconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_write@x 63 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hpowerup A2 0 CODE 0 powerup dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lpowerup A2 0 CODE 0 powerup dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext0 0 0 ABS 0 text0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext1 0 0 ABS 0 text1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext0 D0A 0 CODE 0 text0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_INTCON2bits FF1 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext2 0 0 ABS 0 text2 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext1 8DA 0 CODE 0 text1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext3 0 0 ABS 0 text3 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext2 BF6 0 CODE 0 text2 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext4 0 0 ABS 0 text4 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext3 B12 0 CODE 0 text3 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext5 0 0 ABS 0 text5 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext4 B72 0 CODE 0 text4 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext6 0 0 ABS 0 text6 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext5 D4A 0 CODE 0 text5 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext7 0 0 ABS 0 text7 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext6 C34 0 CODE 0 text6 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext8 0 0 ABS 0 text8 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext7 822 0 CODE 0 text7 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext9 0 0 ABS 0 text9 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext8 CCE 0 CODE 0 text8 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext9 D20 0 CODE 0 text9 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_init 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_InitApp BF6 0 CODE 0 text10 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_test@ln 78 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_test@pos 7A 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_ofi2_lcd_set 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of__initialization D40 0 CODE 0 cinit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_clear D5A 0 CODE 0 text16 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2_lcd_delay D30 0 CODE 0 text20 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hidata 0 0 CODE 0 idata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lidata 0 0 CODE 0 idata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_ofi2_lcd_write 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_ofi2_lcd_delay 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_pos 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hstack 0 0 STACK 2 stack dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lstack 0 0 STACK 2 stack dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_delay 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_high_isr 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+int_func 984 0 CODE 0 intcode_body dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hparam 0 0 ABS 0 rparam dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lparam 0 0 ABS 0 rparam dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_InitApp BB6 0 CODE 0 text10 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_ofi2_lcd_delay D40 0 CODE 0 text20 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_ofi2_lcd_write_cmd 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hsmallconst 822 0 SMALLCONST 0 smallconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2lcd_set@msb 12 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_set 822 0 CODE 0 text7 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__pcinit D40 0 CODE 0 cinit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_ConfigureOscillator 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+_lcd_pos B12 0 CODE 0 text3 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+_low_isr 18 0 CODE 0 intcodelo dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2_lcd_enable CEE 0 CODE 0 text19 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_main 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hconst 0 0 CODE 0 const dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lconst 0 0 CODE 0 const dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_ofi2_lcd_enable 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_ofi2_lcd_write CA0 0 CODE 0 text15 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_test 984 0 CODE 0 text1 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2_lcd_write_cmd CA0 0 CODE 0 text17 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+i2lcd_write@x 16 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_BORV$1 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_PWRT$ON 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_pos@coluna 64 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext10 0 0 ABS 0 text10 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext20 0 0 ABS 0 text20 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext10 BB6 0 CODE 0 text10 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext11 0 0 ABS 0 text11 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext20 D30 0 CODE 0 text20 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext11 D5A 0 CODE 0 text11 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_set 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_set@data 61 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext14 0 0 ABS 0 text14 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext14 AA6 0 CODE 0 text14 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext15 0 0 ABS 0 text15 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext15 C72 0 CODE 0 text15 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__Htext16 0 0 ABS 0 text16 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_write_buffer AA6 0 CODE 0 text14 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext16 D52 0 CODE 0 text16 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext17 0 0 ABS 0 text17 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext17 CA0 0 CODE 0 text17 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext18 0 0 ABS 0 text18 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext18 A1E 0 CODE 0 text18 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Htext19 0 0 ABS 0 text19 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__ptext19 CEE 0 CODE 0 text19 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__end_of_lcd_write C34 0 CODE 0 text2 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_INTCONbits FF2 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hend_init A6 0 CODE 0 end_init dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lend_init A2 0 CODE 0 end_init dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_lcd_write_buffer$625 1D 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__size_of_lcd_cursor_off 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_enable CEE 0 CODE 0 text8 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_cursor_off D52 0 CODE 0 text5 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__stringdata 811 0 SMALLCONST 0 smallconst dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_write_buffer@pos 1F 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__pintcode_body 984 0 CODE 0 intcode_body dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+intlevel0 0 0 CODE 0 text C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__size_of_InitApp 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+intlevel1 0 0 CODE 0 text C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+intlevel2 0 0 CODE 0 text C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+i2lcd_set@data 14 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+intlevel3 0 0 CODE 0 text C:\Users\ALEXAN~1\AppData\Local\Temp\s670.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_ofi2_lcd_set AA6 0 CODE 0 text18 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_write_buffer@size 19 0 COMRAM 1 cstackCOMRAM dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_write_cmd@x 63 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_write_cmd C72 0 CODE 0 text6 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+start_initialization D40 0 CODE 0 cinit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_write_buffer B12 0 CODE 0 text14 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_low_isr A2 0 CODE 0 intcodelo dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__initialization D40 0 CODE 0 cinit dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__end_of_lcd_init BB6 0 CODE 0 text4 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__activetblptr 2 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+lcd_test@msgTest 68 0 BANK0 1 cstackBANK0 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+_ConfigureOscillator D5A 0 CODE 0 text11 dist/XC8_18F4550/production\LCD4Bits1602.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1
+intcode 0 8 8 C 1
+intcodelo 0 18 18 8E 1
+smallconst 0 800 800 22 1
+config 0 300000 300000 E 1
+idloc 0 200000 200000 8 1
+cstackCOMRAM 1 1 1 30 1
+cstackBANK0 1 60 60 1C 1
+text7 0 822 822 53A 1

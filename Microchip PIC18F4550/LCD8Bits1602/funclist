@@ -1,0 +1,22 @@
+_lcd_delay: CODE, 2822 0 16
+__stringdata: SMALLCONST, 2065 0 15
+i2_lcd_write_cmd: CODE, 2800 0 22
+lcd_test@F5275: SMALLCONST, 2049 0 16
+_ConfigureOscillator: CODE, 2894 0 2
+_main: CODE, 2694 0 40
+_lcd_pos: CODE, 2636 0 58
+_high_isr: CODE, 8 0 2390
+_InitApp: CODE, 2572 0 64
+__initialization: CODE, 2868 0 0
+_lcd_clear: CODE, 2886 0 8
+i2_lcd_delay: CODE, 2838 0 16
+i2_lcd_write: CODE, 2778 0 22
+_lcd_test: CODE, 2082 0 162
+_lcd_write: CODE, 2734 0 22
+_lcd_enable: CODE, 2854 0 14
+_lcd_cursor_off: CODE, 2878 0 8
+_lcd_write_cmd: CODE, 2756 0 22
+_lcd_write_buffer: CODE, 2398 0 108
+_low_isr: CODE, 24 0 138
+_lcd_init: CODE, 2506 0 66
+Total: 3209

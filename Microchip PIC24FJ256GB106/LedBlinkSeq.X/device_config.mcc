@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration device="PIC24FJ256GB106" mcc_version="v2.25">
+    <managers>
+        <manager generated="true" name="Pin Manager" reloadPin="manual">
+            <setting name="package" option="TQFP64"/>
+            <setting name="sorting" option="true"/>
+            <resource customName="IO_RD6" digital="true" direction="OUTPUT" function="RD6" ioc="0" module="GPIO" name="RD6" start="false" type="pin" wpu="false"/>
+            <file checksum="868271722" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
+            <file checksum="1173258651" modified="false" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
+        </manager>
+        <manager generated="true" name="System" reloadPin="manual">
+            <initializer comment="" name="Initialize">
+                <setting name="DOZE" option="1:8" register="CLKDIV"/>
+                <setting name="DOZEN" option="disabled" register="CLKDIV"/>
+                <setting name="RCDIV" option="FRC/2" register="CLKDIV"/>
+                <setting name="CPDIV" option="1:1" register="CLKDIV"/>
+                <setting name="ROI" option="disabled" register="CLKDIV"/>
+            </initializer>
+            <setting name="WPDIS" option="WPDIS"/>
+            <setting name="WPFP" option="WPFP511"/>
+            <setting name="WPEND" option="WPENDMEM"/>
+            <setting name="WPCFG" option="WPCFGDIS"/>
+            <setting name="IESO" option="ON"/>
+            <setting name="IOL1WAY" option="ON"/>
+            <setting name="FNOSC" option="FRCDIV"/>
+            <setting name="PLLDIV" option="DIV12"/>
+            <setting name="PLL_96MHZ" option="ON"/>
+            <setting name="DISUVREG" option="ON"/>
+            <setting name="POSCMOD" option="NONE"/>
+            <setting name="OSCIOFNC" option="OFF"/>
+            <setting name="FCKSM" option="CSDCMD"/>
+            <setting name="WDTPS" option="PS32768"/>
+            <setting name="COE" option="OFF"/>
+            <setting name="ICS" option="PGx1"/>
+            <setting name="FWPSA" option="PR128"/>
+            <setting name="WINDIS" option="OFF"/>
+            <setting name="GWRP" option="OFF"/>
+            <setting name="GCP" option="OFF"/>
+            <setting name="FWDTEN" option="OFF"/>
+            <setting name="BKBUG" option="OFF"/>
+            <setting name="JTAGEN" option="ON"/>
+            <setting name="Primary Oscillator" option="3000000"/>
+            <setting name="Secondary Oscillator" option="31000"/>
+            <setting name="generateConfigBits" option="false"/>
+            <file checksum="1650171243" modified="false" name="mcc.c" path="mcc_generated_files/mcc.c"/>
+            <file checksum="2338260698" modified="true" name="mcc.h" path="mcc_generated_files/mcc.h"/>
+        </manager>
+    </managers>
+    <modules>
+        <module generated="true" mode="GPIO" name="GPIO" order="0" reloadPin="manual" type="GPIO">
+            <resource customName="IO_RD6" digital="true" direction="OUTPUT" function="RD6" ioc="0" module="GPIO" name="RD6" start="false" type="pin" wpu="false"/>
+        </module>
+    </modules>
+</configuration>
