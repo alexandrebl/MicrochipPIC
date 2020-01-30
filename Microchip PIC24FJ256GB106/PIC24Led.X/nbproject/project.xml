@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>PIC24Led</name>
+            <creation-uuid>2c5a65b2-e550-48b0-86d2-824d485e0bbf</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
+            <asminc-extensions/>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>../../../../Program Files (x86)/Microchip/xc16/v1.41/lib</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
