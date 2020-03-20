@@ -3,13 +3,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "71 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 71: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F6024 `(v ~T0 @X0 0 tf ]
-"95 ./mcc_generated_files/eusart1.h
-[; ;./mcc_generated_files/eusart1.h: 95: extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-[v _EUSART1_RxDefaultInterruptHandler `*F6024 ~T0 @X0 0 e ]
-"3 main.c
-[; ;main.c: 3: void SerialRXData(void);
-[v _SerialRXData `(v ~T0 @X0 0 ef ]
 "16932 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16932:     struct {
 [s S826 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -54,6 +47,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
 [v __delay `JF5956 ~T0 @X0 0 e ]
 [p i __delay ]
+"328 ./mcc_generated_files/eusart1.h
+[; ;./mcc_generated_files/eusart1.h: 328: uint8_t EUSART1_Read(void);
+[v _EUSART1_Read `(uc ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -814,81 +810,87 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"5 main.c
-[; ;main.c: 5: void main(void)
+"3 main.c
+[; ;main.c: 3: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"6
-[; ;main.c: 6: {
+"4
+[; ;main.c: 4: {
 {
 [e :U _main ]
 [f ]
-"7
-[; ;main.c: 7:     SYSTEM_Initialize();
+"5
+[; ;main.c: 5:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"9
-[; ;main.c: 9:     EUSART1_RxDefaultInterruptHandler = &SerialRXData;
-[e = _EUSART1_RxDefaultInterruptHandler &U _SerialRXData ]
-"11
-[; ;main.c: 11:     (INTCONbits.GIE = 1);
+"8
+[; ;main.c: 8:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"12
-[; ;main.c: 12:     (INTCONbits.PEIE = 1);
+"9
+[; ;main.c: 9:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"14
-[; ;main.c: 14:     int x = 1;
+"11
+[; ;main.c: 11:     int x = 1;
 [v _x `i ~T0 @X0 1 a ]
 [e = _x -> 1 `i ]
-"15
-[; ;main.c: 15:     while (1)
+"12
+[; ;main.c: 12:     while (1)
 [e :U 858 ]
-"16
-[; ;main.c: 16:     {
+"13
+[; ;main.c: 13:     {
 {
-"18
-[; ;main.c: 18:         if(EUSART1_is_tx_ready())
+"15
+[; ;main.c: 15:         if(EUSART1_is_tx_ready())
 [e $ ! != -> ( _EUSART1_is_tx_ready ..  `i -> 0 `i 860  ]
-"19
-[; ;main.c: 19:         {
+"16
+[; ;main.c: 16:         {
 {
-"20
-[; ;main.c: 20:             EUSART1_Write(x++);
+"17
+[; ;main.c: 17:             EUSART1_Write(x++);
 [e ( _EUSART1_Write (1 -> ++ _x -> 1 `i `uc ]
-"21
-[; ;main.c: 21:         }
+"18
+[; ;main.c: 18:         }
 }
 [e :U 860 ]
-"23
-[; ;main.c: 23:         if(x == 127) x =0;
+"20
+[; ;main.c: 20:         if(x == 127) x =0;
 [e $ ! == _x -> 127 `i 861  ]
 [e = _x -> 0 `i ]
 [e :U 861 ]
-"25
-[; ;main.c: 25:         do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
+"22
+[; ;main.c: 22:         do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
 [e :U 864 ]
 {
 [e = . . _LATCbits 0 0 -> ~ -> . . _LATCbits 0 0 `i `uc ]
 }
 [e :U 863 ]
-"26
-[; ;main.c: 26:         _delay((unsigned long)((100)*(4000000/4000.0)));
+"23
+[; ;main.c: 23:         _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"25
+[; ;main.c: 25:         char data = EUSART1_Read();
+[v _data `uc ~T0 @X0 1 a ]
+[e = _data -> ( _EUSART1_Read ..  `uc ]
 "27
-[; ;main.c: 27:     }
+[; ;main.c: 27:         if(data == 'A'){
+[e $ ! == -> _data `ui -> 65 `ui 865  ]
+{
+"28
+[; ;main.c: 28:             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0);
+[e :U 868 ]
+{
+[e = . . _LATCbits 0 1 -> ~ -> . . _LATCbits 0 1 `i `uc ]
+}
+[e :U 867 ]
+"29
+[; ;main.c: 29:         }
+}
+[e :U 865 ]
+"30
+[; ;main.c: 30:     }
 }
 [e :U 857 ]
 [e $U 858  ]
 [e :U 859 ]
-"28
-[; ;main.c: 28: }
+"31
+[; ;main.c: 31: }
 [e :UE 856 ]
-}
-"30
-[; ;main.c: 30: void SerialRXData(void){
-[v _SerialRXData `(v ~T0 @X0 1 ef ]
-{
-[e :U _SerialRXData ]
-[f ]
-"32
-[; ;main.c: 32: }
-[e :UE 865 ]
 }

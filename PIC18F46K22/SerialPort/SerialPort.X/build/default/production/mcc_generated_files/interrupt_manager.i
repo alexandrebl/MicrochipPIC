@@ -11,6 +11,13 @@
 # 1 "mcc_generated_files/interrupt_manager.h" 1
 # 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
+
+
+
+
+
+
+void ClearSerialInterrupt(void);
 # 49 "mcc_generated_files/interrupt_manager.c" 2
 
 # 1 "mcc_generated_files/mcc.h" 1
@@ -9556,9 +9563,9 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 109 "mcc_generated_files/pin_manager.h"
+# 120 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 121 "mcc_generated_files/pin_manager.h"
+# 132 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -9683,6 +9690,10 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 117 "mcc_generated_files/interrupt_manager.h"
+void ClearSerialInterrupt(void);
+# 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 75 "mcc_generated_files/eusart1.h"
@@ -9773,4 +9784,9 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
     {
 
     }
+}
+
+void ClearSerialInterrupt(void){
+    PIE1bits.RC1IE = 0;
+    PIR1bits.RC1IF = 0;
 }

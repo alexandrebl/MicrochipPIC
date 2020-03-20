@@ -1,13 +1,10 @@
 #include "mcc_generated_files/mcc.h"
 
-void SerialRXData(void);
-
 void main(void)
 {
     SYSTEM_Initialize();
     
-    EUSART1_RxDefaultInterruptHandler = &SerialRXData;
-
+    
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
 
@@ -22,11 +19,13 @@ void main(void)
         
         if(x == 127) x =0;
         
-        LED_RX_Toggle();
+        LED_TX_Toggle();
         __delay_ms(100);
+        
+        char data = EUSART1_Read();
+        
+        if(data == 'A'){
+            LED_RX_Toggle();
+        }
     }
-}
-
-void SerialRXData(void){
-    
 }

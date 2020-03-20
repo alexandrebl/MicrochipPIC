@@ -65,16 +65,27 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set LED_TX aliases
+#define LED_TX_TRIS                 TRISCbits.TRISC0
+#define LED_TX_LAT                  LATCbits.LATC0
+#define LED_TX_PORT                 PORTCbits.RC0
+#define LED_TX_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define LED_TX_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define LED_TX_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define LED_TX_GetValue()           PORTCbits.RC0
+#define LED_TX_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define LED_TX_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+
 // get/set LED_RX aliases
-#define LED_RX_TRIS                 TRISCbits.TRISC0
-#define LED_RX_LAT                  LATCbits.LATC0
-#define LED_RX_PORT                 PORTCbits.RC0
-#define LED_RX_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
-#define LED_RX_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
-#define LED_RX_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
-#define LED_RX_GetValue()           PORTCbits.RC0
-#define LED_RX_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
-#define LED_RX_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define LED_RX_TRIS                 TRISCbits.TRISC1
+#define LED_RX_LAT                  LATCbits.LATC1
+#define LED_RX_PORT                 PORTCbits.RC1
+#define LED_RX_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
+#define LED_RX_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
+#define LED_RX_Toggle()             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
+#define LED_RX_GetValue()           PORTCbits.RC1
+#define LED_RX_SetDigitalInput()    do { TRISCbits.TRISC1 = 1; } while(0)
+#define LED_RX_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
 
 // get/set RC6 procedures
 #define RC6_SetHigh()            do { LATCbits.LATC6 = 1; } while(0)

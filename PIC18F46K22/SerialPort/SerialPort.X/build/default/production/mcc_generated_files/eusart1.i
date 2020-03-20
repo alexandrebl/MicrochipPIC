@@ -9781,8 +9781,9 @@ uint8_t EUSART1_Read(void)
 {
     uint8_t readValue = 0;
 
-    while(0 == eusart1RxCount)
+    if(0 == eusart1RxCount)
     {
+        return 0;
     }
 
     eusart1RxLastError = eusart1RxStatusBuffer[eusart1RxTail];

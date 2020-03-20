@@ -113,3 +113,5 @@ void INTERRUPT_Initialize (void);
 /**
  End of File
 */
+
+void ClearSerialInterrupt(void);

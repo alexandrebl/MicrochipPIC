@@ -78,6 +78,11 @@ void __interrupt() INTERRUPT_InterruptManager (void)
         //Unhandled Interrupt
     }
 }
+
+void ClearSerialInterrupt(void){
+    PIE1bits.RC1IE = 0;
+    PIR1bits.RC1IF = 0;
+}
 /**
  End of File
 */

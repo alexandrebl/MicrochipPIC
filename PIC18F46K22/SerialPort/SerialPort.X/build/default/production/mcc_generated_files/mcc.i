@@ -9551,9 +9551,9 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 109 "mcc_generated_files/pin_manager.h"
+# 120 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 121 "mcc_generated_files/pin_manager.h"
+# 132 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -9681,6 +9681,13 @@ extern void cputs(const char *);
 # 1 "mcc_generated_files/interrupt_manager.h" 1
 # 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
+
+
+
+
+
+
+void ClearSerialInterrupt(void);
 # 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1

@@ -9550,9 +9550,9 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 109 "./mcc_generated_files/pin_manager.h"
+# 120 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 121 "./mcc_generated_files/pin_manager.h"
+# 132 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -9680,6 +9680,13 @@ extern void cputs(const char *);
 # 1 "./mcc_generated_files/interrupt_manager.h" 1
 # 110 "./mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
+
+
+
+
+
+
+void ClearSerialInterrupt(void);
 # 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart1.h" 1
@@ -9743,13 +9750,10 @@ void OSCILLATOR_Initialize(void);
 # 1 "main.c" 2
 
 
-void SerialRXData(void);
-
 void main(void)
 {
     SYSTEM_Initialize();
 
-    EUSART1_RxDefaultInterruptHandler = &SerialRXData;
 
     (INTCONbits.GIE = 1);
     (INTCONbits.PEIE = 1);
@@ -9767,9 +9771,11 @@ void main(void)
 
         do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
         _delay((unsigned long)((100)*(4000000/4000.0)));
+
+        char data = EUSART1_Read();
+
+        if(data == 'A'){
+            do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0);
+        }
     }
-}
-
-void SerialRXData(void){
-
 }
