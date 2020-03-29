@@ -46,19 +46,28 @@ void send(char *data, char size){
 
 void receive(void){
     bool blink = false;
+    bool found = false;
 
     char rxData;
     do{
         rxData = EUSART_Read();
-
-        if(rxData == 'K'){
+        
+        if((found) && (rxData == 'K')){
             led3Blink();
+            led3Blink();
+            led3Blink();
+            led3Blink();
+        }
+
+        if(rxData == 'O'){
+            led3Blink();
+            found = true;
         }else{        
             led4Blink();
         }        
 
         blink = true;
-    }while(EUSART_is_rx_ready() && rxData != 'K');
+    }while(EUSART_is_rx_ready() && rxData != 'K' && found);
     
     if(blink) led2Blink();
 }

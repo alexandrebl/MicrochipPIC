@@ -17310,19 +17310,28 @@ void send(char *data, char size){
 
 void receive(void){
     _Bool blink = 0;
+    _Bool found = 0;
 
     char rxData;
     do{
         rxData = EUSART_Read();
 
-        if(rxData == 'K'){
+        if((found) && (rxData == 'K')){
             led3Blink();
+            led3Blink();
+            led3Blink();
+            led3Blink();
+        }
+
+        if(rxData == 'O'){
+            led3Blink();
+            found = 1;
         }else{
             led4Blink();
         }
 
         blink = 1;
-    }while(EUSART_is_rx_ready() && rxData != 'K');
+    }while(EUSART_is_rx_ready() && rxData != 'K' && found);
 
     if(blink) led2Blink();
 }
