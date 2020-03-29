@@ -10,45 +10,44 @@ void led4Blink();
 
 void main(void)
 {
+    
     SYSTEM_Initialize();
+    
+    INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     while (true)
     {
-        send("AT\r\n", 6);
-        
+        send("AeT+CWMODE=", 11);
+        receive();
+        receive();
+        receive();
         receive();
     }
 }
 
-void send(char *data, char size){
-    if(EUSART_is_tx_ready()){
-        EUSART_Write('A');
-        led1Blink();
-    }
-    if(EUSART_is_tx_ready()){
-        EUSART_Write('T');
-        led1Blink();
-    }
-    if(EUSART_is_tx_ready()){
-        EUSART_Write('\r');
-        led1Blink();
-    }
-    if(EUSART_is_tx_ready()){
-        EUSART_Write('\n');
-        led1Blink();
+void send(char *data, char size){    
+    for(char index = 0; index < size; index++){
+        if(EUSART_is_tx_ready()){
+            EUSART_Write(data[index]);
+            led1Blink();    
+        }
     }
 }
 
 void receive(void){
     bool blink = false;
+
+
     while(EUSART_is_rx_ready()){
         char rxData = EUSART_Read();
-        
-        if(rxData == 'A'){
+
+        if(rxData == 'O'){
             led3Blink();
         }else{        
             led4Blink();
         }        
+
         blink = true;
     }
     
@@ -57,9 +56,9 @@ void receive(void){
 
 void led1Blink(){
     LED1_SetHigh();
-    __delay_ms(400);
+    __delay_ms(30);
     LED1_SetLow();
-    __delay_ms(400);
+    __delay_ms(30);
 }
 
 void led2Blink(){
@@ -82,3 +81,4 @@ void led4Blink(){
     LED4_SetLow();
     __delay_ms(200);
 }
+
