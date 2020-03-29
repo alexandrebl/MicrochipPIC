@@ -16997,4 +16997,8 @@ void PIN_MANAGER_Initialize(void)
 
 void PIN_MANAGER_IOC(void)
 {
+    do { LATAbits.LATA5 = 0; } while(0);
+    do { LATAbits.LATA1 = 0; } while(0);
+    do { LATAbits.LATA2 = 0; } while(0);
+    do { LATCbits.LATC5 = 0; } while(0);
 }

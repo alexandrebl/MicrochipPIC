@@ -69,6 +69,10 @@ void PIN_MANAGER_Initialize(void)
   
 void PIN_MANAGER_IOC(void)
 {   
+    LED1_SetLow();
+    LED2_SetLow();
+    LED3_SetLow();
+    LED4_SetLow();
 }
 
 /**

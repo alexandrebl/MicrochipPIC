@@ -17266,6 +17266,9 @@ void OSCILLATOR_Initialize(void);
 
 void send(const char *data, char size);
 void receive(void);
+void setup(void);
+_Bool error(void);
+void reset(void);
 
 void led1Blink(void);
 void led2Blink(void);
@@ -17273,19 +17276,39 @@ void led3Blink(void);
 void led4Blink(void);
 
 const char *test = "AT";
+const char *resetHw = "AT+RST";
 
 void main(void)
 {
+    setup();
+    reset();
+
+    while (1)
+    {
+        send(test, 2);
+
+        if(!error()) receive(); else{
+            reset();
+        }
+    }
+}
+
+void reset(void){
+    send(resetHw, 6);
+    _delay((unsigned long)((2000)*(4000000/4000.0)));
+}
+
+_Bool error(void){
+    return EUSART_get_last_status().status != 0;
+}
+
+void setup(void){
     SYSTEM_Initialize();
 
     (INTCONbits.GIE = 1);
     (INTCONbits.PEIE = 1);
 
-    while (1)
-    {
-        send(test, 2);
-        receive();
-    }
+    PIN_MANAGER_IOC();
 }
 
 void send(const char *data, char size){

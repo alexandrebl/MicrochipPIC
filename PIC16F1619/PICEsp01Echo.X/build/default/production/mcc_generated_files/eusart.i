@@ -17344,17 +17344,7 @@ void EUSART_Write(uint8_t txData)
     }
     PIE1bits.TXIE = 1;
 }
-
-char getch(void)
-{
-    return EUSART_Read();
-}
-
-void putch(char txData)
-{
-    EUSART_Write(txData);
-}
-
+# 206 "mcc_generated_files/eusart.c"
 void EUSART_Transmit_ISR(void)
 {
 

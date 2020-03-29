@@ -2,6 +2,9 @@
 
 void send(const char *data, char size);
 void receive(void);
+void setup(void);
+bool error(void);
+void reset(void);
 
 void led1Blink(void);
 void led2Blink(void);
@@ -9,19 +12,39 @@ void led3Blink(void);
 void led4Blink(void);
 
 const char *test = "AT";
+const char *resetHw = "AT+RST";
 
 void main(void)
 {    
+    setup();    
+    reset();
+    
+    while (true)
+    {
+        send(test, 2);
+        
+        if(!error()) receive(); else{
+            reset();
+        }       
+    }
+}
+
+void reset(void){
+    send(resetHw, 6);
+    __delay_ms(2000);
+}
+
+bool error(void){
+    return EUSART_get_last_status().status != 0;
+}
+
+void setup(void){
     SYSTEM_Initialize();
     
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
 
-    while (true)
-    {
-        send(test, 2);
-        receive();        
-    }
+    PIN_MANAGER_IOC();
 }
 
 void send(const char *data, char size){    

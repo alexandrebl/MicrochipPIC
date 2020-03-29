@@ -83,6 +83,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22995
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 22995: extern volatile unsigned char RB7PPS __attribute__((address(0xE9F)));
 [v _RB7PPS `Vuc ~T0 @X0 0 e@3743 ]
+"2637
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2637:     struct {
+[s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S137 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 ]
+"2636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2636: typedef union {
+[u S136 `S137 1 ]
+[n S136 . . ]
+"2646
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2646: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
+[v _LATAbits `VS136 ~T0 @X0 0 e@268 ]
+"2726
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2726:     struct {
+[s S141 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S141 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"2725
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2725: typedef union {
+[u S140 `S141 1 ]
+[n S140 . . ]
+"2737
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2737: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
+[v _LATCbits `VS140 ~T0 @X0 0 e@270 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1502,6 +1524,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _PIN_MANAGER_IOC ]
 [f ]
 "72
-[; ;mcc_generated_files/pin_manager.c: 72: }
+[; ;mcc_generated_files/pin_manager.c: 72:     do { LATAbits.LATA5 = 0; } while(0);
+[e :U 1220 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 1219 ]
+"73
+[; ;mcc_generated_files/pin_manager.c: 73:     do { LATAbits.LATA1 = 0; } while(0);
+[e :U 1223 ]
+{
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+}
+[e :U 1222 ]
+"74
+[; ;mcc_generated_files/pin_manager.c: 74:     do { LATAbits.LATA2 = 0; } while(0);
+[e :U 1226 ]
+{
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 1225 ]
+"75
+[; ;mcc_generated_files/pin_manager.c: 75:     do { LATCbits.LATC5 = 0; } while(0);
+[e :U 1229 ]
+{
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 1228 ]
+"76
+[; ;mcc_generated_files/pin_manager.c: 76: }
 [e :UE 1217 ]
 }
