@@ -21,11 +21,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3 main.c
 [; ;main.c: 3: void send(char *data, char size);
 [v _send `(v ~T0 @X0 0 ef2`*uc`uc ]
-[v F9591 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
-[v __delay `JF9591 ~T0 @X0 0 e ]
-[p i __delay ]
-"4 main.c
+"4
 [; ;main.c: 4: void receive(void);
 [v _receive `(v ~T0 @X0 0 ef ]
 "166 ./mcc_generated_files/eusart.h
@@ -40,7 +36,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "329 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 329: uint8_t EUSART_Read(void);
 [v _EUSART_Read `(uc ~T0 @X0 0 ef ]
-"8 main.c
+"7 main.c
+[; ;main.c: 7: void led2Blink();
+[v _led2Blink `(v ~T0 @X0 0 e? ]
+"8
 [; ;main.c: 8: void led3Blink();
 [v _led3Blink `(v ~T0 @X0 0 e? ]
 "9
@@ -49,9 +48,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "214 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 214: _Bool EUSART_is_rx_ready(void);
 [v _EUSART_is_rx_ready `(a ~T0 @X0 0 ef ]
-"7 main.c
-[; ;main.c: 7: void led2Blink();
-[v _led2Blink `(v ~T0 @X0 0 e? ]
 "2637 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2637:     struct {
 [s S137 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -63,7 +59,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2646
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2646: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
 [v _LATAbits `VS136 ~T0 @X0 0 e@268 ]
-"2726
+[v F9591 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF9591 ~T0 @X0 0 e ]
+[p i __delay ]
+"2726 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1619.h: 2726:     struct {
 [s S141 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S141 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
@@ -1428,282 +1428,252 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 21:         send("AT", 2);
 [e ( _send (2 , :s 1C -> -> 2 `i `uc ]
 "22
-[; ;main.c: 22:         _delay((unsigned long)((2000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"23
-[; ;main.c: 23:         receive();
+[; ;main.c: 22:         receive();
 [e ( _receive ..  ]
-"24
-[; ;main.c: 24:     }
+"23
+[; ;main.c: 23:     }
 }
 [e :U 1221 ]
 [e $U 1222  ]
 [e :U 1223 ]
-"25
-[; ;main.c: 25: }
+"24
+[; ;main.c: 24: }
 [e :UE 1220 ]
 }
-"27
-[; ;main.c: 27: void send(char *data, char size){
+"26
+[; ;main.c: 26: void send(char *data, char size){
 [v _send `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
 [e :U _send ]
 [v _data `*uc ~T0 @X0 1 r1 ]
 [v _size `uc ~T0 @X0 1 r2 ]
 [f ]
-"28
-[; ;main.c: 28:     if(EUSART_is_tx_ready()){
+"27
+[; ;main.c: 27:     if(EUSART_is_tx_ready()){
 [e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 1225  ]
 {
-"29
-[; ;main.c: 29:         EUSART_Write('A');
+"28
+[; ;main.c: 28:         EUSART_Write('A');
 [e ( _EUSART_Write (1 -> -> 65 `ui `uc ]
-"30
-[; ;main.c: 30:     }
+"29
+[; ;main.c: 29:     }
 }
 [e :U 1225 ]
-"32
-[; ;main.c: 32:     if(EUSART_is_tx_ready()){
+"31
+[; ;main.c: 31:     if(EUSART_is_tx_ready()){
 [e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 1226  ]
 {
-"33
-[; ;main.c: 33:         EUSART_Write('T');
+"32
+[; ;main.c: 32:         EUSART_Write('T');
 [e ( _EUSART_Write (1 -> -> 84 `ui `uc ]
-"34
-[; ;main.c: 34:     }
+"33
+[; ;main.c: 33:     }
 }
 [e :U 1226 ]
-"36
-[; ;main.c: 36:     if(EUSART_is_tx_ready()){
+"35
+[; ;main.c: 35:     if(EUSART_is_tx_ready()){
 [e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 1227  ]
 {
-"37
-[; ;main.c: 37:         EUSART_Write('\r');
+"36
+[; ;main.c: 36:         EUSART_Write('\r');
 [e ( _EUSART_Write (1 -> -> 13 `ui `uc ]
-"38
-[; ;main.c: 38:     }
+"37
+[; ;main.c: 37:     }
 }
 [e :U 1227 ]
-"40
-[; ;main.c: 40:     if(EUSART_is_tx_ready()){
+"39
+[; ;main.c: 39:     if(EUSART_is_tx_ready()){
 [e $ ! != -> ( _EUSART_is_tx_ready ..  `i -> 0 `i 1228  ]
 {
-"41
-[; ;main.c: 41:         EUSART_Write('\n');
+"40
+[; ;main.c: 40:         EUSART_Write('\n');
 [e ( _EUSART_Write (1 -> -> 10 `ui `uc ]
-"42
-[; ;main.c: 42:     }
+"41
+[; ;main.c: 41:     }
 }
 [e :U 1228 ]
-"44
-[; ;main.c: 44:     led1Blink();
+"43
+[; ;main.c: 43:     led1Blink();
 [e ( _led1Blink ..  ]
-"45
-[; ;main.c: 45: }
+"44
+[; ;main.c: 44: }
 [e :UE 1224 ]
 }
-"47
-[; ;main.c: 47: void receive(void){
+"46
+[; ;main.c: 46: void receive(void){
 [v _receive `(v ~T0 @X0 1 ef ]
 {
 [e :U _receive ]
 [f ]
-"48
-[; ;main.c: 48:     _Bool blink = 0;
-[v _blink `a ~T0 @X0 1 a ]
-[e = _blink -> -> 0 `i `a ]
-"49
-[; ;main.c: 49:     _Bool found = 0;
+"47
+[; ;main.c: 47:     _Bool found = 0;
 [v _found `a ~T0 @X0 1 a ]
 [e = _found -> -> 0 `i `a ]
-"51
-[; ;main.c: 51:     char rxData;
+"49
+[; ;main.c: 49:     char rxData;
 [v _rxData `uc ~T0 @X0 1 a ]
-"52
-[; ;main.c: 52:     do{
+"50
+[; ;main.c: 50:     do{
 [e :U 1232 ]
 {
-"53
-[; ;main.c: 53:         rxData = EUSART_Read();
+"51
+[; ;main.c: 51:         rxData = EUSART_Read();
 [e = _rxData -> ( _EUSART_Read ..  `uc ]
-"55
-[; ;main.c: 55:         if((found) && (rxData == 'K')){
-[e $ ! && != -> _found `i -> 0 `i == -> _rxData `ui -> 75 `ui 1233  ]
+"53
+[; ;main.c: 53:         if((found == 0) && (rxData == 'O')){
+[e $ ! && == -> _found `i -> 0 `i == -> _rxData `ui -> 79 `ui 1233  ]
 {
-"56
-[; ;main.c: 56:             led3Blink();
-[e ( _led3Blink ..  ]
+"54
+[; ;main.c: 54:             found = 1;
+[e = _found -> -> 1 `i `a ]
+"55
+[; ;main.c: 55:         }
+}
+[e :U 1233 ]
 "57
-[; ;main.c: 57:             led3Blink();
-[e ( _led3Blink ..  ]
+[; ;main.c: 57:         if((found) && (rxData == 'K')){
+[e $ ! && != -> _found `i -> 0 `i == -> _rxData `ui -> 75 `ui 1234  ]
+{
 "58
-[; ;main.c: 58:             led3Blink();
-[e ( _led3Blink ..  ]
+[; ;main.c: 58:             led2Blink();
+[e ( _led2Blink ..  ]
 "59
 [; ;main.c: 59:             led3Blink();
 [e ( _led3Blink ..  ]
 "60
-[; ;main.c: 60:         }
-}
-[e :U 1233 ]
-"62
-[; ;main.c: 62:         if(rxData == 'O'){
-[e $ ! == -> _rxData `ui -> 79 `ui 1234  ]
-{
-"63
-[; ;main.c: 63:             led3Blink();
-[e ( _led3Blink ..  ]
-"64
-[; ;main.c: 64:             found = 1;
-[e = _found -> -> 1 `i `a ]
-"65
-[; ;main.c: 65:         }else{
-}
-[e $U 1235  ]
-[e :U 1234 ]
-{
-"66
-[; ;main.c: 66:             led4Blink();
+[; ;main.c: 60:             led4Blink();
 [e ( _led4Blink ..  ]
-"67
-[; ;main.c: 67:         }
+"61
+[; ;main.c: 61:         }
 }
-[e :U 1235 ]
-"69
-[; ;main.c: 69:         blink = 1;
-[e = _blink -> -> 1 `i `a ]
-"70
-[; ;main.c: 70:     }while(EUSART_is_rx_ready() && rxData != 'K' && found);
+[e :U 1234 ]
+"63
+[; ;main.c: 63:     }while(EUSART_is_rx_ready() && rxData != 'K' && found);
 }
 [e $ && && != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i != -> _rxData `ui -> 75 `ui != -> _found `i -> 0 `i 1232  ]
 [e :U 1231 ]
-"72
-[; ;main.c: 72:     if(blink) led2Blink();
-[e $ ! != -> _blink `i -> 0 `i 1236  ]
-[e ( _led2Blink ..  ]
-[e :U 1236 ]
-"73
-[; ;main.c: 73: }
+"64
+[; ;main.c: 64: }
 [e :UE 1229 ]
 }
-"75
-[; ;main.c: 75: void led1Blink(){
+"66
+[; ;main.c: 66: void led1Blink(){
 [v _led1Blink `(v ~T0 @X0 1 ef ]
 {
 [e :U _led1Blink ]
 [f ]
-"76
-[; ;main.c: 76:     do { LATAbits.LATA5 = 1; } while(0);
-[e :U 1240 ]
+"67
+[; ;main.c: 67:     do { LATAbits.LATA5 = 1; } while(0);
+[e :U 1238 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 1239 ]
-"77
-[; ;main.c: 77:     _delay((unsigned long)((30)*(4000000/4000.0)));
+[e :U 1237 ]
+"68
+[; ;main.c: 68:     _delay((unsigned long)((30)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 30 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"78
-[; ;main.c: 78:     do { LATAbits.LATA5 = 0; } while(0);
-[e :U 1243 ]
+"69
+[; ;main.c: 69:     do { LATAbits.LATA5 = 0; } while(0);
+[e :U 1241 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 1242 ]
-"79
-[; ;main.c: 79:     _delay((unsigned long)((30)*(4000000/4000.0)));
+[e :U 1240 ]
+"70
+[; ;main.c: 70:     _delay((unsigned long)((30)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 30 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"80
-[; ;main.c: 80: }
-[e :UE 1237 ]
+"71
+[; ;main.c: 71: }
+[e :UE 1235 ]
 }
-"82
-[; ;main.c: 82: void led2Blink(){
+"73
+[; ;main.c: 73: void led2Blink(){
 [v _led2Blink `(v ~T0 @X0 1 ef ]
 {
 [e :U _led2Blink ]
 [f ]
-"83
-[; ;main.c: 83:     do { LATAbits.LATA1 = 1; } while(0);
-[e :U 1247 ]
+"74
+[; ;main.c: 74:     do { LATAbits.LATA1 = 1; } while(0);
+[e :U 1245 ]
 {
 [e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 1246 ]
-"84
-[; ;main.c: 84:     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e :U 1244 ]
+"75
+[; ;main.c: 75:     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"85
-[; ;main.c: 85:     do { LATAbits.LATA1 = 0; } while(0);
-[e :U 1250 ]
+"76
+[; ;main.c: 76:     do { LATAbits.LATA1 = 0; } while(0);
+[e :U 1248 ]
 {
 [e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 }
-[e :U 1249 ]
-"86
-[; ;main.c: 86:     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e :U 1247 ]
+"77
+[; ;main.c: 77:     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"87
-[; ;main.c: 87: }
-[e :UE 1244 ]
+"78
+[; ;main.c: 78: }
+[e :UE 1242 ]
 }
-"89
-[; ;main.c: 89: void led3Blink(){
+"80
+[; ;main.c: 80: void led3Blink(){
 [v _led3Blink `(v ~T0 @X0 1 ef ]
 {
 [e :U _led3Blink ]
 [f ]
-"90
-[; ;main.c: 90:     do { LATAbits.LATA2 = 1; } while(0);
-[e :U 1254 ]
+"81
+[; ;main.c: 81:     do { LATAbits.LATA2 = 1; } while(0);
+[e :U 1252 ]
 {
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 1253 ]
-"91
-[; ;main.c: 91:     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e :U 1251 ]
+"82
+[; ;main.c: 82:     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"92
-[; ;main.c: 92:     do { LATAbits.LATA2 = 0; } while(0);
-[e :U 1257 ]
+"83
+[; ;main.c: 83:     do { LATAbits.LATA2 = 0; } while(0);
+[e :U 1255 ]
 {
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 1256 ]
-"93
-[; ;main.c: 93:     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e :U 1254 ]
+"84
+[; ;main.c: 84:     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"94
-[; ;main.c: 94: }
-[e :UE 1251 ]
+"85
+[; ;main.c: 85: }
+[e :UE 1249 ]
 }
-"96
-[; ;main.c: 96: void led4Blink(){
+"87
+[; ;main.c: 87: void led4Blink(){
 [v _led4Blink `(v ~T0 @X0 1 ef ]
 {
 [e :U _led4Blink ]
 [f ]
-"97
-[; ;main.c: 97:     do { LATCbits.LATC5 = 1; } while(0);
-[e :U 1261 ]
+"88
+[; ;main.c: 88:     do { LATCbits.LATC5 = 1; } while(0);
+[e :U 1259 ]
 {
 [e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 1260 ]
-"98
-[; ;main.c: 98:     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e :U 1258 ]
+"89
+[; ;main.c: 89:     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"99
-[; ;main.c: 99:     do { LATCbits.LATC5 = 0; } while(0);
-[e :U 1264 ]
+"90
+[; ;main.c: 90:     do { LATCbits.LATC5 = 0; } while(0);
+[e :U 1262 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 1263 ]
-"100
-[; ;main.c: 100:     _delay((unsigned long)((200)*(4000000/4000.0)));
+[e :U 1261 ]
+"91
+[; ;main.c: 91:     _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"101
-[; ;main.c: 101: }
-[e :UE 1258 ]
+"92
+[; ;main.c: 92: }
+[e :UE 1256 ]
 }
 [a 1C 65 84 0 ]

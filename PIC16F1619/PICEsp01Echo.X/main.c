@@ -19,7 +19,6 @@ void main(void)
     while (true)
     {
         send("AT", 2);
-        __delay_ms(2000);
         receive();        
     }
 }
@@ -45,31 +44,23 @@ void send(char *data, char size){
 }
 
 void receive(void){
-    bool blink = false;
     bool found = false;
 
     char rxData;
     do{
         rxData = EUSART_Read();
         
+        if((found == false) && (rxData == 'O')){         
+            found = true;
+        }        
+        
         if((found) && (rxData == 'K')){
+            led2Blink();
             led3Blink();
-            led3Blink();
-            led3Blink();
-            led3Blink();
+            led4Blink();
         }
 
-        if(rxData == 'O'){
-            led3Blink();
-            found = true;
-        }else{        
-            led4Blink();
-        }        
-
-        blink = true;
     }while(EUSART_is_rx_ready() && rxData != 'K' && found);
-    
-    if(blink) led2Blink();
 }
 
 void led1Blink(){

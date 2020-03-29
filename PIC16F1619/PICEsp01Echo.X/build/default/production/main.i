@@ -17283,7 +17283,6 @@ void main(void)
     while (1)
     {
         send("AT", 2);
-        _delay((unsigned long)((2000)*(4000000/4000.0)));
         receive();
     }
 }
@@ -17309,31 +17308,23 @@ void send(char *data, char size){
 }
 
 void receive(void){
-    _Bool blink = 0;
     _Bool found = 0;
 
     char rxData;
     do{
         rxData = EUSART_Read();
 
-        if((found) && (rxData == 'K')){
-            led3Blink();
-            led3Blink();
-            led3Blink();
-            led3Blink();
+        if((found == 0) && (rxData == 'O')){
+            found = 1;
         }
 
-        if(rxData == 'O'){
+        if((found) && (rxData == 'K')){
+            led2Blink();
             led3Blink();
-            found = 1;
-        }else{
             led4Blink();
         }
 
-        blink = 1;
     }while(EUSART_is_rx_ready() && rxData != 'K' && found);
-
-    if(blink) led2Blink();
 }
 
 void led1Blink(){
