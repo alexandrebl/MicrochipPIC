@@ -17264,7 +17264,7 @@ void OSCILLATOR_Initialize(void);
 # 1 "main.c" 2
 
 
-void send(char *data, char size);
+void send(char data[], char size);
 void receive(void);
 
 void led1Blink();
@@ -17272,9 +17272,10 @@ void led2Blink();
 void led3Blink();
 void led4Blink();
 
+const char test[2] = "AT";
+
 void main(void)
 {
-
     SYSTEM_Initialize();
 
     (INTCONbits.GIE = 1);
@@ -17282,18 +17283,16 @@ void main(void)
 
     while (1)
     {
-        send("AT", 2);
+        send(test, 2);
         receive();
     }
 }
 
-void send(char *data, char size){
-    if(EUSART_is_tx_ready()){
-        EUSART_Write('A');
-    }
-
-    if(EUSART_is_tx_ready()){
-        EUSART_Write('T');
+void send(char data[], char size){
+    for(char index =0; index < size; index++){
+        if(EUSART_is_tx_ready()){
+            EUSART_Write(data[index]);
+        }
     }
 
     if(EUSART_is_tx_ready()){

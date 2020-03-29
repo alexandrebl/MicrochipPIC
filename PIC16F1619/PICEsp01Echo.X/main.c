@@ -1,6 +1,6 @@
 #include "mcc_generated_files/mcc.h"
 
-void send(char *data, char size);
+void send(char data[], char size);
 void receive(void);
 
 void led1Blink();
@@ -8,9 +8,10 @@ void led2Blink();
 void led3Blink();
 void led4Blink();
 
+const char test[2] = "AT";
+
 void main(void)
-{
-    
+{    
     SYSTEM_Initialize();
     
     INTERRUPT_GlobalInterruptEnable();
@@ -18,20 +19,18 @@ void main(void)
 
     while (true)
     {
-        send("AT", 2);
+        send(test, 2);
         receive();        
     }
 }
 
-void send(char *data, char size){    
-    if(EUSART_is_tx_ready()){
-        EUSART_Write('A');
+void send(char data[], char size){    
+    for(char index =0; index < size; index++){
+        if(EUSART_is_tx_ready()){
+            EUSART_Write(data[index]);
+        }
     }
-    
-    if(EUSART_is_tx_ready()){
-        EUSART_Write('T');
-    }
-    
+        
     if(EUSART_is_tx_ready()){
         EUSART_Write('\r');
     }
