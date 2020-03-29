@@ -17292,15 +17292,18 @@ void send(const char *data, char size){
     for(char index =0; index < size; index++){
         if(EUSART_is_tx_ready()){
             EUSART_Write(data[index]);
+            while(EUSART_is_tx_done());
         }
     }
 
     if(EUSART_is_tx_ready()){
         EUSART_Write('\r');
+        while(EUSART_is_tx_done());
     }
 
     if(EUSART_is_tx_ready()){
         EUSART_Write('\n');
+        while(EUSART_is_tx_done());
     }
     _delay((unsigned long)((100)*(4000000/4000.0)));
     led1Blink();
