@@ -17267,10 +17267,10 @@ void OSCILLATOR_Initialize(void);
 void send(const char *data, char size);
 void receive(void);
 
-void led1Blink();
-void led2Blink();
-void led3Blink();
-void led4Blink();
+void led1Blink(void);
+void led2Blink(void);
+void led3Blink(void);
+void led4Blink(void);
 
 const char *test = "AT";
 
@@ -17326,28 +17326,28 @@ void receive(void){
     }while(EUSART_is_rx_ready() && rxData != 'K' && found);
 }
 
-void led1Blink(){
+void led1Blink(void){
     do { LATAbits.LATA5 = 1; } while(0);
     _delay((unsigned long)((30)*(4000000/4000.0)));
     do { LATAbits.LATA5 = 0; } while(0);
     _delay((unsigned long)((30)*(4000000/4000.0)));
 }
 
-void led2Blink(){
+void led2Blink(void){
     do { LATAbits.LATA1 = 1; } while(0);
     _delay((unsigned long)((200)*(4000000/4000.0)));
     do { LATAbits.LATA1 = 0; } while(0);
     _delay((unsigned long)((200)*(4000000/4000.0)));
 }
 
-void led3Blink(){
+void led3Blink(void){
     do { LATAbits.LATA2 = 1; } while(0);
     _delay((unsigned long)((200)*(4000000/4000.0)));
     do { LATAbits.LATA2 = 0; } while(0);
     _delay((unsigned long)((200)*(4000000/4000.0)));
 }
 
-void led4Blink(){
+void led4Blink(void){
     do { LATCbits.LATC5 = 1; } while(0);
     _delay((unsigned long)((200)*(4000000/4000.0)));
     do { LATCbits.LATC5 = 0; } while(0);
