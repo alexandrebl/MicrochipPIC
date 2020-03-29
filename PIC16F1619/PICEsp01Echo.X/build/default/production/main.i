@@ -17264,7 +17264,7 @@ void OSCILLATOR_Initialize(void);
 # 1 "main.c" 2
 
 
-void send(char data[], char size);
+void send(const char *data, char size);
 void receive(void);
 
 void led1Blink();
@@ -17272,7 +17272,7 @@ void led2Blink();
 void led3Blink();
 void led4Blink();
 
-const char test[2] = "AT";
+const char *test = "AT";
 
 void main(void)
 {
@@ -17288,7 +17288,7 @@ void main(void)
     }
 }
 
-void send(char data[], char size){
+void send(const char *data, char size){
     for(char index =0; index < size; index++){
         if(EUSART_is_tx_ready()){
             EUSART_Write(data[index]);
@@ -17302,7 +17302,7 @@ void send(char data[], char size){
     if(EUSART_is_tx_ready()){
         EUSART_Write('\n');
     }
-
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     led1Blink();
 }
 
