@@ -17285,19 +17285,27 @@ void main(void)
         send("AT", 2);
         _delay((unsigned long)((2000)*(4000000/4000.0)));
         receive();
-        receive();
-        receive();
-        receive();
     }
 }
 
 void send(char *data, char size){
-    for(char index = 0; index < size; index++){
-        if(EUSART_is_tx_ready()){
-            EUSART_Write(data[index]);
-            led1Blink();
-        }
+    if(EUSART_is_tx_ready()){
+        EUSART_Write('A');
     }
+
+    if(EUSART_is_tx_ready()){
+        EUSART_Write('T');
+    }
+
+    if(EUSART_is_tx_ready()){
+        EUSART_Write('\r');
+    }
+
+    if(EUSART_is_tx_ready()){
+        EUSART_Write('\n');
+    }
+
+    led1Blink();
 }
 
 void receive(void){
@@ -17307,14 +17315,14 @@ void receive(void){
     do{
         rxData = EUSART_Read();
 
-        if(rxData == 'O'){
+        if(rxData == 'K'){
             led3Blink();
         }else{
             led4Blink();
         }
 
         blink = 1;
-    }while(EUSART_is_rx_ready() && rxData != 'O');
+    }while(EUSART_is_rx_ready() && rxData != 'K');
 
     if(blink) led2Blink();
 }
