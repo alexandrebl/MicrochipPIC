@@ -9,17 +9,17 @@
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "11 C:\repository\git\MicrochipPIC\PIC16F1619\PICEsp01Echo.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"29
+"30
 [v _send send `(v  1 e 1 0 ]
-"38
+"39
 [v _receive receive `(v  1 e 1 0 ]
-"57
+"58
 [v _led1Blink led1Blink `(v  1 e 1 0 ]
-"64
+"65
 [v _led2Blink led2Blink `(v  1 e 1 0 ]
-"71
+"72
 [v _led3Blink led3Blink `(v  1 e 1 0 ]
-"78
+"79
 [v _led4Blink led4Blink `(v  1 e 1 0 ]
 "88 C:\repository\git\MicrochipPIC\PIC16F1619\PICEsp01Echo.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
@@ -131,7 +131,7 @@
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "2631
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S101 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S107 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -139,8 +139,8 @@
 `uc 1 LATA5 1 0 :1:5 
 ]
 "2646
-[u S108 . 1 `S101 1 . 1 0 ]
-[v _LATAbits LATAbits `VES108  1 e 1 @268 ]
+[u S114 . 1 `S107 1 . 1 0 ]
+[v _LATAbits LATAbits `VES114  1 e 1 @268 ]
 "2681
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2720
@@ -270,22 +270,22 @@
 "11 C:\repository\git\MicrochipPIC\PIC16F1619\PICEsp01Echo.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"27
+"28
 } 0
-"29
+"30
 [v _send send `(v  1 e 1 0 ]
 {
-"30
+"31
 [v send@index index `uc  1 a 1 8 ]
-"29
+"30
 [v send@data data `*.25uc  1 p 2 3 ]
 [v send@size size `uc  1 p 1 5 ]
-"36
+"37
 } 0
-"57
+"58
 [v _led1Blink led1Blink `(v  1 e 1 0 ]
 {
-"62
+"63
 } 0
 "132 C:\repository\git\MicrochipPIC\PIC16F1619\PICEsp01Echo.X\mcc_generated_files/eusart.c
 [v _EUSART_is_tx_ready EUSART_is_tx_ready `(a  1 e 1 0 ]
@@ -300,29 +300,27 @@
 [v EUSART_Write@txData txData `uc  1 a 1 2 ]
 "194
 } 0
-"38 C:\repository\git\MicrochipPIC\PIC16F1619\PICEsp01Echo.X\main.c
+"39 C:\repository\git\MicrochipPIC\PIC16F1619\PICEsp01Echo.X\main.c
 [v _receive receive `(v  1 e 1 0 ]
 {
-"43
-[v receive@rxData rxData `uc  1 a 1 4 ]
-"39
-[v receive@blink blink `a  1 a 1 5 ]
-"55
+"42
+[v receive@rxData rxData `uc  1 a 1 5 ]
+"56
 } 0
-"78
+"79
 [v _led4Blink led4Blink `(v  1 e 1 0 ]
 {
-"83
+"84
 } 0
-"71
+"72
 [v _led3Blink led3Blink `(v  1 e 1 0 ]
 {
-"76
+"77
 } 0
-"64
+"65
 [v _led2Blink led2Blink `(v  1 e 1 0 ]
 {
-"69
+"70
 } 0
 "137 C:\repository\git\MicrochipPIC\PIC16F1619\PICEsp01Echo.X\mcc_generated_files/eusart.c
 [v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]

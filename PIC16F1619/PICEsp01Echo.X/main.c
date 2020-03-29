@@ -18,7 +18,8 @@ void main(void)
 
     while (true)
     {
-        send("AeT+CWMODE=", 11);
+        send("AT", 2);
+        __delay_ms(2000);
         receive();
         receive();
         receive();
@@ -38,9 +39,9 @@ void send(char *data, char size){
 void receive(void){
     bool blink = false;
 
-
-    while(EUSART_is_rx_ready()){
-        char rxData = EUSART_Read();
+    char rxData;
+    do{
+        rxData = EUSART_Read();
 
         if(rxData == 'O'){
             led3Blink();
@@ -49,7 +50,7 @@ void receive(void){
         }        
 
         blink = true;
-    }
+    }while(EUSART_is_rx_ready() && rxData != 'O');
     
     if(blink) led2Blink();
 }
